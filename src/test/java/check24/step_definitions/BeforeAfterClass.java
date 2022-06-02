@@ -28,7 +28,7 @@ public class BeforeAfterClass {
     @After
     public void tearDown(Scenario scenario){
         System.out.println("\tThe App succesfully closed");
-       // Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 
