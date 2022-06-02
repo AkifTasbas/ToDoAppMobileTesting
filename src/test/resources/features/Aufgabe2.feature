@@ -5,8 +5,8 @@
 #2         "Test" in Textfeld schreiben
 #3         cancel klicken                 Es wurde kein neuer Task hinzugefügt, oben steht noch immer "What do you want to do today?"
 Feature: Aufgabe 2 Features
-  @wip
-  Scenario Outline:Adding new Task
+
+  Scenario Outline:Adding new Task and cancel
     Given As a user I click plus button
     Then The Dialog have to be oppened
     And user writes "<Text>" in Text field
