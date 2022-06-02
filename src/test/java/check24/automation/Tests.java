@@ -17,7 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class TestRunner {
+public class Tests {
 
     AppiumDriver<MobileElement> driver;
 
@@ -79,8 +79,6 @@ public class TestRunner {
         //close the app at the end
         driver.closeApp();
 
-        //close the app at the end
-        driver.closeApp();
     }
 
     /*
