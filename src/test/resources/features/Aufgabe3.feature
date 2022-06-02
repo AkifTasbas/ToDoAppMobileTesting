@@ -5,7 +5,7 @@
 #2         done klicken                   Fehlermeldung "Oops, Cannot set an empty text" erscheint
 
 Feature: Aufgabe 3 Features
-
+  @wip
   Scenario:Adding new Task without titel
     Given As a user I click plus button
     Then The Dialog have to be oppened

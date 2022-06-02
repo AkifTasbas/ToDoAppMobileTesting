@@ -3,22 +3,32 @@ package check24.step_definitions;
 import check24.utilities.Driver;
 import io.appium.java_client.MobileElement;
 import io.cucumber.java.en.Then;
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.sql.SQLOutput;
 
 public class Aufgabe4StepDefs {
     @Then("user clicks trash icon")
-    public void user_clicks_trash_icon() throws MalformedURLException, InterruptedException {
+    public void user_clicks_trash_icon() throws IOException, InterruptedException {
         MobileElement mülltonnenIcon = Driver.getDriver().findElement(By.id("com.example.yeshasprabhakar.todo:id/delete"));
         mülltonnenIcon.click();
+        Thread.sleep(2000);
+        File file  = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(file, new File("ScreenshotDeletedSuccesfully.jpg"));
     }
 
-    @Then("DELETED SUCCESFULLY text should be seen on the screen and")
-    public void deleted_SUCCESFULLY_text_should_be_seen_on_the_screen_and() throws MalformedURLException, InterruptedException {
+    @Then("DELETED SUCCESFULLY text should be seen on the screen")
+    public void deleted_SUCCESFULLY_text_should_be_seen_on_the_screen_and() throws IOException, InterruptedException {
+        MobileElement toast = Driver.getDriver().findElement(By.xpath("//android.widget.Toast[1]"));
+        System.out.println("toast = " + toast);
 
     }
     @Then("new Task have to be deleted and {string} task can not be seen on the list")

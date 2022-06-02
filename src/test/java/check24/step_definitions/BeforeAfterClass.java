@@ -20,14 +20,14 @@ public class BeforeAfterClass {
 
     @Before
     public void setUp() throws MalformedURLException, InterruptedException {
-        System.out.println("\tThis is coming from BEFORE");
+        System.out.println("\tSuccesfully connected with Native App");
         Driver.getDriver();
 
     }
 
     @After
     public void tearDown(Scenario scenario){
-        System.out.println("\tThis is coming from AFTER");
+        System.out.println("\tThe App succesfully closed");
        // Driver.closeDriver();
 
     }

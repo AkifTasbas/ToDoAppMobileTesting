@@ -15,7 +15,7 @@ Feature: Aufgabe 4 Features
     Then user clicks done button
     Then new Task have to be created and "<Text>" task can be seen on the list
     And user clicks trash icon
-    Then DELETED SUCCESFULLY text should be seen on the screen and
+    Then DELETED SUCCESFULLY text should be seen on the screen
     Then new Task have to be deleted and "<Text>" task can not be seen on the list
 
     Examples:
