@@ -20,15 +20,16 @@ public class BeforeAfterClass {
 
     @Before
     public void setUp() throws MalformedURLException, InterruptedException {
-        System.out.println("\tSuccesfully connected with Native App");
         Driver.getDriver();
+        System.out.println("\tSuccesfully connected to Native App");
 
     }
 
     @After
     public void tearDown(Scenario scenario){
-        System.out.println("\tThe App succesfully closed");
-        Driver.closeDriver();
+
+        //Driver.closeDriver();
+        System.out.println("\tThe App closed succesfully ");
 
     }
 

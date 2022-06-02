@@ -5,7 +5,7 @@
 #2         "Test" in Textfeld schreiben
 #3         done klicken                    Neuer Task "Test" wurde erstellt und ist in der Liste sichtbar
 #4         Mülltonnen Icon klicken         "Deleted successfully" erscheint Aufgabe wurde aus der Liste entfernt
-
+@wip
 Feature: Aufgabe 4 Features
 
   Scenario Outline:delete an added task

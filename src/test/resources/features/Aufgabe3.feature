@@ -3,9 +3,9 @@
 #Schritt   Aktion                          Erwartetes Ergebnis
 #1         Plus Button klicken            "Lets add mew Task!" Dialog öffnet sich
 #2         done klicken                   Fehlermeldung "Oops, Cannot set an empty text" erscheint
-
+@wip
 Feature: Aufgabe 3 Features
-  @wip
+
   Scenario:Adding new Task without titel
     Given As a user I click plus button
     Then The Dialog have to be oppened
