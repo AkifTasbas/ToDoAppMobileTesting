@@ -4,7 +4,7 @@
 #1         Plus Button klicken            "Lets add mew Task!" Dialog öffnet sich
 #2         "Test" in Textfeld schreiben
 #3         cancel klicken                 Es wurde kein neuer Task hinzugefügt, oben steht noch immer "What do you want to do today?"
-@wip
+
 Feature: Aufgabe 2 Features
 
   Scenario Outline:Adding new Task and cancel

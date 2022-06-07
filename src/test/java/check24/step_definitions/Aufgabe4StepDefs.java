@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,8 +29,15 @@ public class Aufgabe4StepDefs {
 
     @Then("DELETED SUCCESFULLY text should be seen on the screen")
     public void deleted_SUCCESFULLY_text_should_be_seen_on_the_screen_and() throws IOException, InterruptedException {
-        MobileElement toast = Driver.getDriver().findElement(By.xpath("//android.widget.Toast[1]"));
-        System.out.println("toast = " + toast);
+
+        WebDriverWait waitForToast = new WebDriverWait(Driver.getDriver(),25);
+
+        waitForToast.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.Toast")));
+        MobileElement toastMessage=Driver.getDriver().findElement(By.xpath("/hierarchy/android.widget.Toast"));
+        String toastMessageText=toastMessage.getText();
+        //System.out.println("toastMessageText = " + toastMessageText);
+        String expectedMessage="Deleted Successfully!";
+        Assert.assertEquals(toastMessageText,expectedMessage);
 
     }
     @Then("new Task have to be deleted and {string} task can not be seen on the list")
