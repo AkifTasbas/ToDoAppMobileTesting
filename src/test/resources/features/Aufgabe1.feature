@@ -1,4 +1,4 @@
-@wip
+
 Feature: Aufgabe 1 Features
 
 #  ---------------------------------------TEST1 Hinzufügen einer Aufgabe ------------------------------------------------

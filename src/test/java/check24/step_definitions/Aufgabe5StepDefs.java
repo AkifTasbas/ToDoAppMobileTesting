@@ -18,10 +18,10 @@ public class Aufgabe5StepDefs {
 
     @Then("the background should be dark")
     public void the_background_should_be_dark() throws MalformedURLException, InterruptedException {
-        System.out.println("Background is dark");
+      /*  System.out.println("Background is dark");
         MobileElement background = Driver.getDriver().findElement(By.cssSelector("body[background-color='white']"));
         String cssProperty = background.getCssValue("background-color");
-        System.out.println("cssProperty = " + cssProperty);
+        System.out.println("cssProperty = " + cssProperty);*/
 
 
     }
