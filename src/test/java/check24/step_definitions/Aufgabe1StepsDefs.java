@@ -55,6 +55,7 @@ public class Aufgabe1StepsDefs {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='" + text + "']")));
         MobileElement taskTitle = Driver.getDriver().findElement(By.xpath("//*[@text='" + text + "']"));
+
         Assert.assertTrue(taskTitle.isDisplayed());
 
 
