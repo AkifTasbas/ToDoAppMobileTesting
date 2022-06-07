@@ -52,8 +52,13 @@ public class Aufgabe1StepsDefs {
 
     @Then("new Task have to be created and {string} task can be seen on the list")
     public void new_Task_have_to_be_created_and_task_can_be_seen_on_the_list(String text) throws MalformedURLException, InterruptedException {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@text='" + text + "']")));
         MobileElement taskTitle = Driver.getDriver().findElement(By.xpath("//*[@text='" + text + "']"));
+
         Assert.assertTrue(taskTitle.isDisplayed());
+
+
     }
 
 }

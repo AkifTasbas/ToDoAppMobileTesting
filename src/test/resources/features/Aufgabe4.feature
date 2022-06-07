@@ -7,7 +7,7 @@
 #4         Mülltonnen Icon klicken         "Deleted successfully" erscheint Aufgabe wurde aus der Liste entfernt
 
 Feature: Aufgabe 4 Features
-  @wip
+
   Scenario Outline:delete an added task
     Given As a user I click plus button
     Then The Dialog have to be oppened
